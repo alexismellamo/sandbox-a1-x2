@@ -1,0 +1,293 @@
+[
+	{
+		"title": "Session.login",
+		"method": "ga_api.session.login",
+		"attributes": {
+			"user": {
+				"type": "text",
+				"required": true,
+				"mode": "body"
+			},"password": {
+				"type": "text",
+				"required": true,
+				"mode": "body"
+			},"nonce": {
+				"type": "text",
+				"required": true,
+				"mode": "body"
+			}
+		}
+	},{
+		"title": "Session.logout",
+		"method": "ga_api.session.logout",
+		"attributes": {}
+	},{
+		"title": "Session.get",
+		"method": "ga_api.session.get",
+		"attributes": {}
+	},{
+		"title": "Nonce.get",
+		"method": "ga_api.nonce.get",
+		"attributes": {}
+	},{
+		"title": "User.get",
+		"method": "ga_api.user.get",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"mode": "path",
+				"required": true
+			}
+		}
+	},{
+		"title": "User.list",
+		"method": "ga_api.user.list",
+		"attributes": {
+			"Params": {
+				"type": "dict",
+				"params": [
+					{
+						"title": "pag",
+						"type": "number",
+						"mode": "query",
+						"required": false
+					},{
+						"title": "num",
+						"type": "number",
+						"mode": "query",
+						"required": false
+					},{
+						"title": "ord",
+						"type": "text",
+						"mode": "query",
+						"required": false
+					},{
+						"title": "dsc",
+						"type": "number",
+						"mode": "query",
+						"required": false
+					}
+				]
+			}
+		}
+	},{
+		"title": "User.create",
+		"method": "ga_api.user.create",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "User.update",
+		"method": "ga_api.user.update",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "User.delete",
+		"method": "ga_api.user.delete",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true,
+				"mode": "path"
+			}
+		}
+	},{
+		"title": "Candidate.get",
+		"method": "ga_api.candidate.get",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true,
+				"mode": "path"
+			}
+		}
+	},{
+		"title": "Candidate.list",
+		"method": "ga_api.candidate.list",
+		"attributes": {
+			"Params": {
+				"type": "dict",
+				"params": [
+					{
+						"title": "pag",
+						"type": "number",
+						"mode": "path",
+						"required": false
+					},{
+						"title": "num",
+						"type": "number",
+						"required": false
+					},{
+						"title": "ord",
+						"type": "text",
+						"required": false
+					},{
+						"title": "dsc",
+						"type": "number",
+						"required": false
+					}
+				]
+			}
+		}
+	},{
+		"title": "Candidate.create",
+		"method": "ga_api.candidate.create",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Candidate.update",
+		"method": "ga_api.candidate.update",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Candidate.delete",
+		"method": "ga_api.candidate.delete",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true
+			}
+		}
+	},{
+		"title": "Client.get",
+		"method": "ga_api.client.get",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true
+			}
+		}
+	},{
+		"title": "Client.list",
+		"method": "ga_api.client.list",
+		"attributes": {
+			"Params": {
+				"type": "dict",
+				"params": [
+					{
+						"title": "pag",
+						"type": "number",
+						"required": false
+					},{
+						"title": "num",
+						"type": "number",
+						"required": false
+					},{
+						"title": "ord",
+						"type": "text",
+						"required": false
+					},{
+						"title": "dsc",
+						"type": "number",
+						"required": false
+					}
+				]
+			}
+		}
+	},{
+		"title": "Client.create",
+		"method": "ga_api.client.create",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Client.update",
+		"method": "ga_api.client.update",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Client.delete",
+		"method": "ga_api.client.delete",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true
+			}
+		}
+	},{
+		"title": "Employee.get",
+		"method": "ga_api.employee.get",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true
+			}
+		}
+	},{
+		"title": "Employee.list",
+		"method": "ga_api.employee.list",
+		"attributes": {
+			"Params": {
+				"type": "dict",
+				"params": [
+					{
+						"title": "pag",
+						"type": "number",
+						"required": false
+					},{
+						"title": "num",
+						"type": "number",
+						"required": false
+					},{
+						"title": "ord",
+						"type": "text",
+						"required": false
+					},{
+						"title": "dsc",
+						"type": "number",
+						"required": false
+					}
+				]
+			}
+		}
+	},{
+		"title": "Employee.create",
+		"method": "ga_api.employee.create",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Employee.update",
+		"method": "ga_api.employee.update",
+		"attributes": {
+			"Data": {
+				"type": "dict",
+				"required": true
+			}
+		}
+	},{
+		"title": "Employee.delete",
+		"method": "ga_api.employee.delete",
+		"attributes": {
+			"uuid": {
+				"type": "text",
+				"required": true
+			}
+		}
+	}
+]
