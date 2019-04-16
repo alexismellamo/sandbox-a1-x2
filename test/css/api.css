@@ -19,3 +19,8 @@ pre {
 #sessionView {
 	background-color: #007FF6;
 }*/
+#responseWrapper {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+}
