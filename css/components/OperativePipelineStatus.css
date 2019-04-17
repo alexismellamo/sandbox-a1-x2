@@ -1,0 +1,43 @@
+.operative-pipeline-status {
+  display: flex;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #ff5c6f, #ffc35c 48%, #00abaf);
+}
+
+.operative-pipeline-status > .pipe {
+  text-align: center;
+  padding: 0.5em 1em;
+  border-right: 1px solid #ebebeb;
+  position: relative;
+  flex-grow: 1;
+}
+
+.operative-pipeline-status > .pipe::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: calc(50% - 6px);
+  border: 6px solid transparent;
+  border-left-color: #ebebeb;
+}
+
+.operative-pipeline-status > .pipe:last-child::after {
+  content: none;
+}
+
+.operative-pipeline-status > .pipe > p {
+  font-weight: bold;
+  line-height: 1.5;
+  color: white;
+  margin: 0;
+}
+
+.operative-pipeline-status > .pipe > .total {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.operative-pipeline-status > .pipe > .number {
+  font-size: 19px;
+}
+
