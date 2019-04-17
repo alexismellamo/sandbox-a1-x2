@@ -22,7 +22,7 @@ if (typeof Array.prototype.indexOf === 'function') {
 };
 
 let jb_push = {
-	rt: 'wss://sandbox-coda-no-acl.appgranalianza.com.mx/push/',
+	rt: 'wss://sandbox-coda-a1.appgranalianza.com.mx/push/',
 	version: '1.1.0', connected: false, _ws: null,
 	events: {},
 	on: function(event, listener) {

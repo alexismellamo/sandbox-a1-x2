@@ -11,7 +11,7 @@ if(typeof $ == 'undefined') throw new Error('No se encontro jQuery');
 var __a = $.ajax;
 var jb_api = {
 	version: '1.1.0',
-	rt: 'https://sandbox-coda.appgranalianza.com.mx/api/v1.1/',
+	rt: 'https://sandbox-coda-a1.appgranalianza.com.mx/api/v1.1/',
 	_e: function(xhr, t, cb) {
 		/**
 		 * Global HTTP error management
