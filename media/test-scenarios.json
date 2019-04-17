@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Session.login",
-		"method": "ga_api.session.login",
+		"method": "jb_api.session.login",
 		"attributes": {
 			"user": {
 				"type": "text",
@@ -16,19 +16,19 @@
 		}
 	},{
 		"title": "Session.logout",
-		"method": "ga_api.session.logout",
+		"method": "jb_api.session.logout",
 		"attributes": {}
 	},{
 		"title": "Session.get",
-		"method": "ga_api.session.get",
+		"method": "jb_api.session.get",
 		"attributes": {}
 	},{
 		"title": "Nonce.get",
-		"method": "ga_api.nonce.get",
+		"method": "jb_api.nonce.get",
 		"attributes": {}
 	},{
 		"title": "User.get",
-		"method": "ga_api.user.get",
+		"method": "jb_api.user.get",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -37,7 +37,7 @@
 		}
 	},{
 		"title": "User.list",
-		"method": "ga_api.user.list",
+		"method": "jb_api.user.list",
 		"attributes": {
 			"Params": {
 				"type": "dict",
@@ -64,7 +64,7 @@
 		}
 	},{
 		"title": "User.create",
-		"method": "ga_api.user.create",
+		"method": "jb_api.user.create",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -73,7 +73,7 @@
 		}
 	},{
 		"title": "User.update",
-		"method": "ga_api.user.update",
+		"method": "jb_api.user.update",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -82,7 +82,7 @@
 		}
 	},{
 		"title": "User.delete",
-		"method": "ga_api.user.delete",
+		"method": "jb_api.user.delete",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -91,7 +91,7 @@
 		}
 	},{
 		"title": "Candidate.get",
-		"method": "ga_api.candidate.get",
+		"method": "jb_api.candidate.get",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -100,7 +100,7 @@
 		}
 	},{
 		"title": "Candidate.list",
-		"method": "ga_api.candidate.list",
+		"method": "jb_api.candidate.list",
 		"attributes": {
 			"Params": {
 				"type": "dict",
@@ -127,7 +127,7 @@
 		}
 	},{
 		"title": "Candidate.create",
-		"method": "ga_api.candidate.create",
+		"method": "jb_api.candidate.create",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -136,7 +136,7 @@
 		}
 	},{
 		"title": "Candidate.update",
-		"method": "ga_api.candidate.update",
+		"method": "jb_api.candidate.update",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -145,7 +145,7 @@
 		}
 	},{
 		"title": "Candidate.delete",
-		"method": "ga_api.candidate.delete",
+		"method": "jb_api.candidate.delete",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -154,7 +154,7 @@
 		}
 	},{
 		"title": "Client.get",
-		"method": "ga_api.client.get",
+		"method": "jb_api.client.get",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -163,7 +163,7 @@
 		}
 	},{
 		"title": "Client.list",
-		"method": "ga_api.client.list",
+		"method": "jb_api.client.list",
 		"attributes": {
 			"Params": {
 				"type": "dict",
@@ -190,7 +190,7 @@
 		}
 	},{
 		"title": "Client.create",
-		"method": "ga_api.client.create",
+		"method": "jb_api.client.create",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -199,7 +199,7 @@
 		}
 	},{
 		"title": "Client.update",
-		"method": "ga_api.client.update",
+		"method": "jb_api.client.update",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -208,7 +208,7 @@
 		}
 	},{
 		"title": "Client.delete",
-		"method": "ga_api.client.delete",
+		"method": "jb_api.client.delete",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -217,7 +217,7 @@
 		}
 	},{
 		"title": "Employee.get",
-		"method": "ga_api.employee.get",
+		"method": "jb_api.employee.get",
 		"attributes": {
 			"uuid": {
 				"type": "text",
@@ -226,7 +226,7 @@
 		}
 	},{
 		"title": "Employee.list",
-		"method": "ga_api.employee.list",
+		"method": "jb_api.employee.list",
 		"attributes": {
 			"Params": {
 				"type": "dict",
@@ -253,7 +253,7 @@
 		}
 	},{
 		"title": "Employee.create",
-		"method": "ga_api.employee.create",
+		"method": "jb_api.employee.create",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -262,7 +262,7 @@
 		}
 	},{
 		"title": "Employee.update",
-		"method": "ga_api.employee.update",
+		"method": "jb_api.employee.update",
 		"attributes": {
 			"Data": {
 				"type": "dict",
@@ -271,7 +271,7 @@
 		}
 	},{
 		"title": "Employee.delete",
-		"method": "ga_api.employee.delete",
+		"method": "jb_api.employee.delete",
 		"attributes": {
 			"uuid": {
 				"type": "text",

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <style type="text/css">
-        /*
-        Component CSS goes here
-         */
-    </style>
-    <title>Coda Boiler-plate</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/all.min.css">
+<link rel="stylesheet" href="./css/base.css">
+<style type="text/css">
+    /*
+    Component CSS goes here
+     */
+</style>
+<title>Coda Boiler-plate</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col">
             <!--Component HTML-DOM goes here-->
-            <p>Componentes DOM goes here</p>
+            <p>Components DOM goes here</p>
         </div>
     </div>
 </div>
@@ -27,11 +27,61 @@
 <script src="./js/sha1.min.js"></script>
 <script src="./js/react.development.js"></script>
 <script src="./js/react-dom.development.js"></script>
+<script src="./js/jobby-api.js"></script>
+<script src="./js/jobby-push.js"></script>
 <script>
 $(document).ready((event) => {
+
     /*
-    Component JS goes here
+    To start the server
      */
+
+    jb_push.init();
+
+    /*
+    Push Server Events & Initialization
+     */
+    jb_push.on('open', function() {
+        /*
+        To subscribe to an event specify event type and object (optional, can use a *), use jb_push.sub
+         */
+
+        jb_push.sub('testEvent', '0f79d15a-eae1-4150-aaef-c77b0116dc3a', (event) => {
+            /*
+            Event looks like:
+            {
+                "type":"testEvent",
+                "object":"0f79d15a-eae1-4150-aaef-c77b0116dc3a",
+                "payload": "..."
+            }
+             */
+            alert(JSON.stringify(event))
+        });
+    });
+
+    jb_push.on('close', function() {
+        /*
+        Script what to do when connection is dropped
+         */
+    });
+
+    jb_push.on('error', function() {
+        /*
+        Script what to do when there's and error and the connection is droped
+         */
+    });
+
+    /*
+    To stop listening to events use jb_push.unsub
+     */
+
+    // jb_push.unsub('testEvent', '0f79d15a-eae1-4150-aaef-c77b0116dc3a');
+
+    /*
+    To stop the server, not necessary in most cases
+     */
+
+    // jb_push.close();
 })
 </script>
 </body>

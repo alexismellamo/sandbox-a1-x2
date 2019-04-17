@@ -1,0 +1,98 @@
+<!--
+ * Author: Rodrigo Spesia <rodrigospesia@me.com>
+ * Copyright Gran Alianza
+ * MX 2018
+-->
+<html>
+<head>
+	<title>Facebook Login Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .fb-wp {
+
+        }
+        footer {
+            margin-top: 20px;
+        }
+        .hid {
+            display: none;
+        }
+        .fb-st {
+            font-size: 16px;
+        }
+        pre{
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body style="padding-top: 20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg">
+				<h5><i class="fab fa-facebook"></i> Facebook Login Test</h5>
+				<hr>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-lg">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge badge-danger float-right fb-st fb-st-not_authorized hid"><i class="fas fa-ban"></i> Unauthorized</span>
+                            <span class="badge badge-warning float-right fb-st fb-st-unknown hid"><i class="fas fa-question-circle"></i> Unknown</span>
+                            <span class="badge badge-success float-right fb-st fb-st-connected hid"><i class="fas fa-thumbs-up"></i> Connected</span>
+                        <i class="fas fa-user-circle"></i> Facebook Login Status
+                    </div>
+                    <div class="card-body">
+                        <div class="fb-wp">
+                            <fb:login-button scope="public_profile,email,birthday" onlogin="checkLoginState();"></fb:login-button>
+                        </div>
+                        <hr>
+                        <p>Facebook Session Status: <span class="fb-status"></span></p>
+                        <pre><code id="fb-session"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<footer class="row">
+			<div class="col-lg text-muted">
+				<p>Gran Alianza &copy; México 2018.</p>
+			</div>
+		</footer>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://connect.facebook.net/es_LA/sdk.js" id="facebook-jssdk"></script>
+<script>
+window.fbAsyncInit = function() {
+    FB.init({appId: '2240340822901228', cookie: true, xfbml: true, version: 'v3.2'});
+    FB.AppEvents.logPageView();
+};
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
+function statusChangeCallback(response) {
+    /*
+    response.status
+    - connected
+    - not_authorized
+    - unknown
+     */
+    $('.fb-st').toggleClass('hid', true);
+    $('.fb-st-' + response.status).toggleClass('hid', false);
+    $('.fb-status').html(response.status)
+    $('#fb-session').html(JSON.stringify(response, undefined, 2))
+}
+
+$(document).ready(function(event) {
+    checkLoginState()
+})
+</script>
+</body>
+</html>

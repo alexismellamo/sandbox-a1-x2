@@ -65,22 +65,22 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/moment.min.js"></script>
-<script src="js/jobby-pull.js"></script>
+<script src="../js/jobby-push.js"></script>
 <script>
 moment.locale('es');
-ga_pull.on('open', function() {
+jb_push.on('open', function() {
 	$('#subscribeForm input, #subscribeForm button').removeAttr('disabled');
 	writeHistory('Connected to Server');
 	$('#disconnectButton').toggleClass('hid', false);
 	$('#connectButton').toggleClass('hid', true);
 });
 
-ga_pull.on('close', function() {
+jb_push.on('close', function() {
 	closeHandler();
 	writeHistory('Connection closed');
 });
 
-ga_pull.on('error', function() {
+jb_push.on('error', function() {
 	closeHandler();
 	writeHistory('Connection error');
 });
@@ -109,7 +109,7 @@ function subscribe(event) {
 	__F[type][obj] = function(event) {
 		writeHistory('Incoming event: <strong>' + type + ' (' + obj + ')</strong><hr><pre><code>' + JSON.stringify(event.payload) + '</code></pre>');
 	}
-	ga_pull.sub(type, obj, __F[type][obj]);
+	jb_push.sub(type, obj, __F[type][obj]);
 	$('#subscriptions').prepend('<a href="#" onclick="unsubscribe(event)" data-type="' + type + '" data-obj="' + obj + '" class="list-group-item">' + type + ' (' + obj + ')<i style="margin-top: 5px;" class="fas fa-times float-right"></i></a>');
 	$('#inputType').val('');
 	$('#inputObject').val('');
@@ -128,7 +128,7 @@ function unsubscribe(event) {
 		alert('No subscription found with those specs');
 		return;
 	}
-	ga_pull.unsub(type, obj, __F[type][obj]);
+	jb_push.unsub(type, obj, __F[type][obj]);
 	writeHistory('Dropped subscription to <strong>' + type + ' (' + obj + ')</strong>')
 	delete __F[type][obj]
 }
@@ -138,18 +138,22 @@ function writeHistory(message) {
 }
 
 function connectButtonClick(event) {
-	ga_pull.init();
+	jb_push.init();
 }
 
 function disconnectButtonClick(event) {
-	ga_pull._ws.close();
+	jb_push.close();
 }
 
 function clean() {
 	$('#output').html('');
 }
 
-$('.endpoint-label').html(ga_pull.rt);
+$('.endpoint-label').html(jb_push.rt);
+
+$(document).ready((event) => {
+	jb_push.init();
+})
 
 </script>
 </body>

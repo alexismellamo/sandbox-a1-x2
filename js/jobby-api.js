@@ -9,10 +9,9 @@
  */
 if(typeof $ == 'undefined') throw new Error('No se encontro jQuery');
 var __a = $.ajax;
-var ga_api = {
-	version: '1.1',
-	// rt: 'https://sandbox-coda-no-acl.appgranalianza.com.mx/api/v1.1/',
-    rt: '/api/v1.1/',
+var jb_api = {
+	version: '1.1.0',
+	rt: 'https://sandbox-coda.appgranalianza.com.mx/api/v1.1/',
 	_e: function(xhr, t, cb) {
 		/**
 		 * Global HTTP error management
@@ -52,11 +51,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'address/' + _i
+                url: jb_api.rt + 'address/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -68,11 +67,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'address'
+                url: jb_api.rt + 'address'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -86,11 +85,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'address'
+                url: jb_api.rt + 'address'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -104,11 +103,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'address/' + _d.id
+                url: jb_api.rt + 'address/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -119,11 +118,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'address/' + _i
+                url: jb_api.rt + 'address/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -137,11 +136,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'account/' + _i
+                url: jb_api.rt + 'account/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -153,11 +152,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'account'
+                url: jb_api.rt + 'account'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -171,11 +170,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'account'
+                url: jb_api.rt + 'account'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -189,11 +188,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'account/' + _d.id
+                url: jb_api.rt + 'account/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -204,11 +203,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'account/' + _i
+                url: jb_api.rt + 'account/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -222,11 +221,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'appointment/' + _i
+                url: jb_api.rt + 'appointment/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -238,11 +237,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'appointment'
+                url: jb_api.rt + 'appointment'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -256,11 +255,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'appointment'
+                url: jb_api.rt + 'appointment'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -274,11 +273,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'appointment/' + _d.id
+                url: jb_api.rt + 'appointment/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -289,11 +288,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'appointment/' + _i
+                url: jb_api.rt + 'appointment/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -307,11 +306,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'bill/' + _i
+                url: jb_api.rt + 'bill/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -323,11 +322,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'bill'
+                url: jb_api.rt + 'bill'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -341,11 +340,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'bill'
+                url: jb_api.rt + 'bill'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -359,11 +358,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'bill/' + _d.id
+                url: jb_api.rt + 'bill/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -374,11 +373,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'bill/' + _i
+                url: jb_api.rt + 'bill/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -392,11 +391,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'client/' + _i
+			    url: jb_api.rt + 'client/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, list: function(_d, cb) {
 			/**
@@ -408,11 +407,11 @@ var ga_api = {
 			    context: this,
 			    type:'GET',
 			    data: _d,
-			    url: ga_api.rt + 'client'
+			    url: jb_api.rt + 'client'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, create: function(_d, cb) {
 			/**
@@ -426,11 +425,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'client'
+			    url: jb_api.rt + 'client'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, update: function(_d, cb) {
 			/**
@@ -444,11 +443,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'client/' + _d.id
+			    url: jb_api.rt + 'client/' + _d.id
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, delete: function(_i, cb) {
 			/**
@@ -459,11 +458,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'DELETE',
-			    url: ga_api.rt + 'client/' + _i
+			    url: jb_api.rt + 'client/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	},
@@ -477,11 +476,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'candidate/' + _i
+			    url: jb_api.rt + 'candidate/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, list: function(_d, cb) {
 			/**
@@ -493,11 +492,11 @@ var ga_api = {
 			    context: this,
 			    type:'GET',
 			    data: _d,
-			    url: ga_api.rt + 'candidate'
+			    url: jb_api.rt + 'candidate'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, create: function(_d, cb) {
 			/**
@@ -511,11 +510,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'candidate'
+			    url: jb_api.rt + 'candidate'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, update: function(_d, cb) {
 			/**
@@ -529,11 +528,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'candidate/' + _d.id
+			    url: jb_api.rt + 'candidate/' + _d.id
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, delete: function(_i, cb) {
 			/**
@@ -544,15 +543,15 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'DELETE',
-			    url: ga_api.rt + 'user/' + _i
+			    url: jb_api.rt + 'user/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	},
-	process_status: {
+    process_status: {
         get: function(_i, cb) {
             /**
              * Returns ProcessStatus Data
@@ -584,6 +583,39 @@ var ga_api = {
                 ga_api._e(xhr, t, cb);
             });
     },
+    process_status: {
+        get: function (_i, cb) {
+            /**
+             * Returns ProcessStatus Data
+             * _i: ProcessStatus ID
+             * cb: Callback function(error, data)
+             **/
+            __a({
+                context: this,
+                type: 'GET',
+                url: jb_api.rt + 'process_status/' + _i
+            }).done(function (data) {
+                cb.call(this, null, data);
+            }).fail(function (xhr, t, __m) {
+                jb_api._e(xhr, t, cb);
+            });
+        }, list: function (cb) {
+            /**
+             * Returns ProcessStatus Collection
+             * cb: Callback function(error, data)
+             **/
+            __a({
+                context: this,
+                type: 'GET',
+                data: {},
+                url: jb_api.rt + 'process_status'
+            }).done(function (data) {
+                cb.call(this, null, data);
+            }).fail(function (xhr, t, __m) {
+                jb_api._e(xhr, t, cb);
+            });
+        }
+    },
     candidate_application: {
         get: function(_i, cb) {
             /**
@@ -594,11 +626,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'candidate_application/' + _i
+                url: jb_api.rt + 'candidate_application/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -610,11 +642,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'candidate_application'
+                url: jb_api.rt + 'candidate_application'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -628,11 +660,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'candidate_application'
+                url: jb_api.rt + 'candidate_application'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -646,11 +678,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'candidate_application/' + _d.id
+                url: jb_api.rt + 'candidate_application/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -661,11 +693,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'candidate_application/' + _i
+                url: jb_api.rt + 'candidate_application/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -679,11 +711,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'employee/' + _i
+                url: jb_api.rt + 'employee/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -695,11 +727,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'employee'
+                url: jb_api.rt + 'employee'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -713,11 +745,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'employee'
+                url: jb_api.rt + 'employee'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -731,11 +763,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'employee/' + _d.id
+                url: jb_api.rt + 'employee/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -746,11 +778,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'user/' + _i
+                url: jb_api.rt + 'user/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -764,11 +796,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'job/' + _i
+			    url: jb_api.rt + 'job/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, list: function(_d, cb) {
 			/**
@@ -780,11 +812,11 @@ var ga_api = {
 			    context: this,
 			    type:'GET',
 			    data: _d,
-			    url: ga_api.rt + 'job'
+			    url: jb_api.rt + 'job'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, create: function(_d, cb) {
 			/**
@@ -798,11 +830,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'job'
+			    url: jb_api.rt + 'job'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, update: function(_d, cb) {
 			/**
@@ -816,11 +848,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'job/' + _d.id
+			    url: jb_api.rt + 'job/' + _d.id
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, delete: function(_i, cb) {
 			/**
@@ -831,11 +863,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'DELETE',
-			    url: ga_api.rt + 'job/' + _i
+			    url: jb_api.rt + 'job/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	},
@@ -849,11 +881,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'job_instance/' + _i
+                url: jb_api.rt + 'job_instance/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -865,11 +897,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'job_instance'
+                url: jb_api.rt + 'job_instance'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -883,11 +915,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'job_instance'
+                url: jb_api.rt + 'job_instance'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -901,11 +933,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'job_instance/' + _d.id
+                url: jb_api.rt + 'job_instance/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -916,11 +948,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'job_instance/' + _i
+                url: jb_api.rt + 'job_instance/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         },
         appointment: {
@@ -933,11 +965,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'GET',
-                    url: ga_api.rt + 'job_instance/' + _i + '/appointment'
+                    url: jb_api.rt + 'job_instance/' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, add: function(_i, _d, cb) {
                 /**
@@ -952,11 +984,11 @@ var ga_api = {
                     dataType: 'json',
                     data: JSON.stringify(_d),
                     contentType: 'application/json',
-                    url: ga_api.rt + 'job_instance' + _i + '/appointment'
+                    url: jb_api.rt + 'job_instance' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, remove: function(_i, cb) {
                 /**
@@ -968,11 +1000,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'DELETE',
-                    url: ga_api.rt + 'job_instance/' + _i + '/appointment'
+                    url: jb_api.rt + 'job_instance/' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }
         }
@@ -992,11 +1024,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/client/' + _i
+                        url: jb_api.rt + 'kpi/operative/client/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1010,11 +1042,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/total/client/' + _i
+                        url: jb_api.rt + 'kpi/operative/total/client/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1033,11 +1065,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/employee/' + _i
+                        url: jb_api.rt + 'kpi/commercial/employee/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1051,11 +1083,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/total/employee/' + _i
+                        url: jb_api.rt + 'kpi/commercial/total/employee/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             },
@@ -1072,11 +1104,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/employee/' + _i
+                        url: jb_api.rt + 'kpi/operative/employee/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1090,11 +1122,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/total/employee/' + _i
+                        url: jb_api.rt + 'kpi/operative/total/employee/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1110,11 +1142,11 @@ var ga_api = {
                     __a({
                         context: this,
                         type:'GET',
-                        url: ga_api.rt + 'kpi/operative/candidate_application/' + _i
+                        url: jb_api.rt + 'kpi/operative/candidate_application/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1133,11 +1165,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/team/' + _i
+                        url: jb_api.rt + 'kpi/commercial/team/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1151,11 +1183,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/total/team/' + _i
+                        url: jb_api.rt + 'kpi/commercial/total/team/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             },
@@ -1172,11 +1204,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/team/' + _i
+                        url: jb_api.rt + 'kpi/operative/team/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1190,11 +1222,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/total/team/' + _i
+                        url: jb_api.rt + 'kpi/operative/total/team/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1213,11 +1245,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/state/' + _i
+                        url: jb_api.rt + 'kpi/commercial/state/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1231,11 +1263,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/total/state/' + _i
+                        url: jb_api.rt + 'kpi/commercial/total/state/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             },
@@ -1252,11 +1284,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/state/' + _i
+                        url: jb_api.rt + 'kpi/operative/state/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1270,11 +1302,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/total/state/' + _i
+                        url: jb_api.rt + 'kpi/operative/total/state/' + _i
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1292,11 +1324,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial'
+                        url: jb_api.rt + 'kpi/commercial'
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1310,11 +1342,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/commercial/total'
+                        url: jb_api.rt + 'kpi/commercial/total'
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             },
@@ -1330,11 +1362,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative'
+                        url: jb_api.rt + 'kpi/operative'
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 },
                 get_total: function(_d, cb) {
@@ -1348,11 +1380,11 @@ var ga_api = {
                         context: this,
                         type:'GET',
                         data: _d,
-                        url: ga_api.rt + 'kpi/operative/total'
+                        url: jb_api.rt + 'kpi/operative/total'
                     }).done(function(data) {
                         cb.call(this, null, data);
                     }).fail(function(xhr, t, __m) {
-                        ga_api._e(xhr, t, cb);
+                        jb_api._e(xhr, t, cb);
                     });
                 }
             }
@@ -1368,11 +1400,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'location/' + _i
+                url: jb_api.rt + 'location/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -1384,11 +1416,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'location'
+                url: jb_api.rt + 'location'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -1402,11 +1434,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'location'
+                url: jb_api.rt + 'location'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -1420,11 +1452,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'location/' + _d.id
+                url: jb_api.rt + 'location/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -1435,11 +1467,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'location/' + _i
+                url: jb_api.rt + 'location/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -1453,11 +1485,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'goal/' + _i
+                url: jb_api.rt + 'goal/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, get_for_role: function(_i, _d, cb) {
             /**
@@ -1471,11 +1503,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'goal/role/' + _i
+                url: jb_api.rt + 'goal/role/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, get_for_user_group: function(_i, _d, cb) {
             /**
@@ -1489,11 +1521,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'goal/user_group/' + _i
+                url: jb_api.rt + 'goal/user_group/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, get_for_user: function(_i, _d, cb) {
             /**
@@ -1507,11 +1539,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'goal/user/' + _i
+                url: jb_api.rt + 'goal/user/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -1523,11 +1555,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'goal'
+                url: jb_api.rt + 'goal'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -1541,11 +1573,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'goal'
+                url: jb_api.rt + 'goal'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -1559,11 +1591,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'goal/' + _d.id
+                url: jb_api.rt + 'goal/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -1574,11 +1606,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'goal/' + _i
+                url: jb_api.rt + 'goal/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -1592,11 +1624,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'message/' + _i
+                url: jb_api.rt + 'message/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -1608,11 +1640,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'message'
+                url: jb_api.rt + 'message'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -1626,11 +1658,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'message'
+                url: jb_api.rt + 'message'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -1644,11 +1676,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'message/' + _d.id
+                url: jb_api.rt + 'message/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, send: function(_i, cb) {
             /**
@@ -1659,11 +1691,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'PUT',
-                url: ga_api.rt + 'message/' + _i + '/send'
+                url: jb_api.rt + 'message/' + _i + '/send'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, receive: function(_i, cb) {
             /**
@@ -1674,11 +1706,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'PUT',
-                url: ga_api.rt + 'message/' + _i + '/receive'
+                url: jb_api.rt + 'message/' + _i + '/receive'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, view: function(_i, cb) {
             /**
@@ -1689,11 +1721,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'PUT',
-                url: ga_api.rt + 'message/' + _i + '/view'
+                url: jb_api.rt + 'message/' + _i + '/view'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -1704,11 +1736,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'message/' + _i
+                url: jb_api.rt + 'message/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         },
         attachment: {
@@ -1721,11 +1753,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'GET',
-                    url: ga_api.rt + 'message/' + _i + '/attachment'
+                    url: jb_api.rt + 'message/' + _i + '/attachment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, create: function(_i, _d, cb) {
                 /**
@@ -1740,11 +1772,11 @@ var ga_api = {
                     dataType: 'json',
                     data: JSON.stringify(_d),
                     contentType: 'application/json',
-                    url: ga_api.rt + 'message' + _i + '/attachment'
+                    url: jb_api.rt + 'message' + _i + '/attachment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, delete: function(_i, cb) {
                 /**
@@ -1756,11 +1788,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'DELETE',
-                    url: ga_api.rt + 'message/' + _i + '/attachment'
+                    url: jb_api.rt + 'message/' + _i + '/attachment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }
         }
@@ -1775,11 +1807,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'notification/' + _i
+                url: jb_api.rt + 'notification/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -1791,11 +1823,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'notification'
+                url: jb_api.rt + 'notification'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, receive: function(_i, cb) {
             /**
@@ -1806,11 +1838,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'PUT',
-                url: ga_api.rt + 'notification/' + _i + '/receive'
+                url: jb_api.rt + 'notification/' + _i + '/receive'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, view: function(_i, cb) {
             /**
@@ -1821,11 +1853,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'PUT',
-                url: ga_api.rt + 'notification/' + _i + '/view'
+                url: jb_api.rt + 'notification/' + _i + '/view'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -1839,11 +1871,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'project/' + _i
+			    url: jb_api.rt + 'project/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, list: function(_d, cb) {
 			/**
@@ -1855,11 +1887,11 @@ var ga_api = {
 			    context: this,
 			    type:'GET',
 			    data: _d,
-			    url: ga_api.rt + 'project'
+			    url: jb_api.rt + 'project'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, create: function(_d, cb) {
 			/**
@@ -1873,11 +1905,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'project'
+			    url: jb_api.rt + 'project'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, update: function(_d, cb) {
 			/**
@@ -1891,11 +1923,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'project/' + _d.id
+			    url: jb_api.rt + 'project/' + _d.id
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, delete: function(_i, cb) {
 			/**
@@ -1906,11 +1938,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'DELETE',
-			    url: ga_api.rt + 'project/' + _i
+			    url: jb_api.rt + 'project/' + _i
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	},
@@ -1924,11 +1956,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'user/' + _i
+                url: jb_api.rt + 'user/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -1940,11 +1972,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'user'
+                url: jb_api.rt + 'user'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -1958,11 +1990,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'user'
+                url: jb_api.rt + 'user'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -1976,11 +2008,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'user/' + _d.id
+                url: jb_api.rt + 'user/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -1991,11 +2023,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'user/' + _i
+                url: jb_api.rt + 'user/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         },
         appointment: {
@@ -2008,11 +2040,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'GET',
-                    url: ga_api.rt + 'user/' + _i + '/appointment'
+                    url: jb_api.rt + 'user/' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, create: function(_i, _d, cb) {
                 /**
@@ -2027,11 +2059,11 @@ var ga_api = {
                     dataType: 'json',
                     data: JSON.stringify(_d),
                     contentType: 'application/json',
-                    url: ga_api.rt + 'user' + _i + '/appointment'
+                    url: jb_api.rt + 'user' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, delete: function(_i, cb) {
                 /**
@@ -2043,11 +2075,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'DELETE',
-                    url: ga_api.rt + 'user/' + _i + '/appointment'
+                    url: jb_api.rt + 'user/' + _i + '/appointment'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }
         },
@@ -2061,11 +2093,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'GET',
-                    url: ga_api.rt + 'user/' + _i + '/task'
+                    url: jb_api.rt + 'user/' + _i + '/task'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, create: function(_i, _d, cb) {
                 /**
@@ -2080,11 +2112,11 @@ var ga_api = {
                     dataType: 'json',
                     data: JSON.stringify(_d),
                     contentType: 'application/json',
-                    url: ga_api.rt + 'user' + _i + '/task'
+                    url: jb_api.rt + 'user' + _i + '/task'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }, delete: function(_i, cb) {
                 /**
@@ -2096,11 +2128,11 @@ var ga_api = {
                 __a({
                     context: this,
                     type:'DELETE',
-                    url: ga_api.rt + 'user/' + _i + '/task'
+                    url: jb_api.rt + 'user/' + _i + '/task'
                 }).done(function(data) {
                     cb.call(this, null, data);
                 }).fail(function(xhr, t, __m) {
-                    ga_api._e(xhr, t, cb);
+                    jb_api._e(xhr, t, cb);
                 });
             }
         }
@@ -2115,11 +2147,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'GET',
-                url: ga_api.rt + 'task/' + _i
+                url: jb_api.rt + 'task/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, list: function(_d, cb) {
             /**
@@ -2131,11 +2163,11 @@ var ga_api = {
                 context: this,
                 type:'GET',
                 data: _d,
-                url: ga_api.rt + 'task'
+                url: jb_api.rt + 'task'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, create: function(_d, cb) {
             /**
@@ -2149,11 +2181,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'task'
+                url: jb_api.rt + 'task'
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, update: function(_d, cb) {
             /**
@@ -2167,11 +2199,11 @@ var ga_api = {
                 dataType: 'json',
                 data: JSON.stringify(_d),
                 contentType: 'application/json',
-                url: ga_api.rt + 'task/' + _d.id
+                url: jb_api.rt + 'task/' + _d.id
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }, delete: function(_i, cb) {
             /**
@@ -2182,11 +2214,11 @@ var ga_api = {
             __a({
                 context: this,
                 type:'DELETE',
-                url: ga_api.rt + 'task/' + _i
+                url: jb_api.rt + 'task/' + _i
             }).done(function(data) {
                 cb.call(this, null, data);
             }).fail(function(xhr, t, __m) {
-                ga_api._e(xhr, t, cb);
+                jb_api._e(xhr, t, cb);
             });
         }
     },
@@ -2199,11 +2231,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'nonce'
+			    url: jb_api.rt + 'nonce'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	},
@@ -2216,11 +2248,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'GET',
-			    url: ga_api.rt + 'session'
+			    url: jb_api.rt + 'session'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, login: function(_d, cb) {
 			/**
@@ -2234,11 +2266,11 @@ var ga_api = {
 			    dataType: 'json',
 			    data: JSON.stringify(_d),
 			    contentType: 'application/json',
-			    url: ga_api.rt + 'session'
+			    url: jb_api.rt + 'session'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}, logout: function(cb) {
 			/**
@@ -2249,11 +2281,11 @@ var ga_api = {
 			__a({
 			    context: this,
 			    type:'DELETE',
-			    url: ga_api.rt + 'session'
+			    url: jb_api.rt + 'session'
 			}).done(function(data) {
 			    cb.call(this, null, data);
 			}).fail(function(xhr, t, __m) {
-			    ga_api._e(xhr, t, cb);
+			    jb_api._e(xhr, t, cb);
 			});
 		}
 	}

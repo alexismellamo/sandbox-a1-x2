@@ -1,5 +1,5 @@
 if(typeof $ == 'undefined') throw new Error("jQuery es requerido para ejecutar api.js")
-$('.root-label').html(ga_api.rt);
+$('.root-label').html(jb_api.rt);
 var testScenarios = JSON.parse(document.getElementById('testScenarios').textContent);
 var statusCodes = JSON.parse(document.getElementById('statusCodes').textContent);
 for(var x in testScenarios) $('#methodSelect').append('<option value="' + x + '">' + testScenarios[x].title + '</option>')
@@ -95,7 +95,7 @@ function loginSubmitHandler(event) {
 var currentSession = null;
 
 function loadSession() {
-	ga_api.session.get(function(error, response) {
+	jb_api.session.get(function(error, response) {
 		if(error) return er(error, '#userView');
 		if(!response.data) {
 			currentSession = null;
@@ -117,7 +117,7 @@ function showSessionView(view) {
 }
 
 function logout() {
-	ga_api.session.logout(function(error, response) {
+	jb_api.session.logout(function(error, response) {
 		if(error) return er(error, '#userView');
 		loadSession();
 	});
@@ -128,13 +128,13 @@ function login() {
 	var usr = vw.find('.usr-input').val();
 	var pwd = vw.find('.pwd-input').val();
 	pwd = sha1(pwd);
-	ga_api.nonce.get(function(error, response) {
+	jb_api.nonce.get(function(error, response) {
 		if(error) return er(error, '#loginView');
 		var _nonce = response.data;
 		pwd = sha1(pwd + _nonce.nonce);
 		$('#loginButton').button('loading');
 		$('#loginButton').attr('disabled', 'disabled')
-		ga_api.session.login({
+		jb_api.session.login({
 			user: usr,
 			password: pwd,
 			nonce: _nonce.id
@@ -160,5 +160,5 @@ function login() {
 	});
 }
 
-$('.endpoint-label').html(ga_api.rt);
+$('.endpoint-label').html(jb_api.rt);
 loadSession();
