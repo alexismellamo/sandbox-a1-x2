@@ -552,6 +552,38 @@ var ga_api = {
 			});
 		}
 	},
+	process_status: {
+        get: function(_i, cb) {
+            /**
+             * Returns ProcessStatus Data
+             * _i: ProcessStatus ID
+             * cb: Callback function(error, data)
+             **/
+            __a({
+                context: this,
+                type:'GET',
+                url: ga_api.rt + 'process_status/' + _i
+            }).done(function(data) {
+                cb.call(this, null, data);
+            }).fail(function(xhr, t, __m) {
+                ga_api._e(xhr, t, cb);
+            });
+        }, list: function(cb) {
+            /**
+             * Returns ProcessStatus Collection
+             * cb: Callback function(error, data)
+             **/
+            __a({
+                context: this,
+                type:'GET',
+                data: {},
+                url: ga_api.rt + 'process_status'
+            }).done(function(data) {
+                cb.call(this, null, data);
+            }).fail(function(xhr, t, __m) {
+                ga_api._e(xhr, t, cb);
+            });
+    },
     candidate_application: {
         get: function(_i, cb) {
             /**

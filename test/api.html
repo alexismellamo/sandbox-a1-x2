@@ -565,6 +565,214 @@
 			}
 		}
 	},{
+			"title": "ProcessStatus.get",
+			"method": "ga_api.process_status.get",
+			"model": "args",
+			"attributes": {
+				"id": {
+					"type": "text",
+					"required": true
+				}
+			}
+		},
+		{
+			"title": "ProcessStatus.list",
+			"method": "ga_api.process_status.list",
+			"model": "json",
+			"attributes": {
+			}
+		},
+		{
+			"title": "CandidateApplication.get",
+			"method": "ga_api.candidate_application.get",
+			"model": "args",
+			"attributes": {
+				"id": {
+					"type": "text",
+					"required": true
+				}
+			}
+		},
+		{
+			"title": "CandidateApplication.list",
+			"method": "ga_api.candidate_application.list",
+			"model": "json",
+			"attributes": {
+				"query": {
+					"type": "text",
+					"required": false
+				},
+				"name": {
+					"type": "text",
+					"required": false
+				},
+				"id": {
+					"type": "text",
+					"required": false
+				},
+				"bill": {
+					"type": "text",
+					"required": false
+				},
+				"candidate": {
+					"type": "text",
+					"required": false
+				},
+				"employee": {
+					"type": "text",
+					"required": false
+				},
+				"job_instance": {
+					"type": "text",
+					"required": false
+				},
+				"process_status": {
+					"type": "text",
+					"required": false
+				},
+				"hire_date_range": {
+					"type": "text",
+					"required": false
+				},
+				"leave_date_range": {
+					"type": "text",
+					"required": false
+				},
+				"warranty_expiration_date_range": {
+					"type": "text",
+					"required": false
+				},
+				"pag": {
+					"type": "number",
+					"required": false
+				},
+				"num": {
+					"type": "number",
+					"required": false
+				},
+				"ord": {
+					"type": "text",
+					"required": false
+				},
+				"asc": {
+					"type": "number",
+					"required": false
+				}
+			}
+		},
+		{
+			"title": "CandidateApplication.create",
+			"method": "ga_api.candidate_application.create",
+			"model": "json",
+			"attributes": {
+				"id": {
+					"type": "text",
+					"required": false
+				},
+				"turnover": {
+					"type": "text",
+					"required": false
+				},
+				"source": {
+					"type": "text",
+					"required": false
+				},
+				"bill": {
+					"type": "text",
+					"required": false
+				},
+				"candidate": {
+					"type": "text",
+					"required": true
+				},
+				"employee": {
+					"type": "text",
+					"required": false
+				},
+				"job_instance": {
+					"type": "text",
+					"required": false
+				},
+				"process_status": {
+					"type": "text",
+					"required": false
+				},
+				"hire_date": {
+					"type": "text",
+					"required": false
+				},
+				"leave_date": {
+					"type": "text",
+					"required": false
+				},
+				"warranty_expiration": {
+					"type": "text",
+					"required": false
+				}
+			}
+		},
+		{
+			"title": "CandidateApplication.update",
+			"method": "ga_api.candidate_application.update",
+			"model": "json",
+			"attributes": {
+				"id": {
+					"type": "text",
+					"required": true
+				},
+				"turnover": {
+					"type": "text",
+					"required": false
+				},
+				"source": {
+					"type": "text",
+					"required": false
+				},
+				"bill": {
+					"type": "text",
+					"required": false
+				},
+				"candidate": {
+					"type": "text",
+					"required": false
+				},
+				"employee": {
+					"type": "text",
+					"required": false
+				},
+				"job_instance": {
+					"type": "text",
+					"required": false
+				},
+				"process_status": {
+					"type": "text",
+					"required": false
+				},
+				"hire_date": {
+					"type": "text",
+					"required": false
+				},
+				"leave_date": {
+					"type": "text",
+					"required": false
+				},
+				"warranty_expiration": {
+					"type": "text",
+					"required": false
+				}
+			}
+		},
+		{
+			"title": "CandidateApplication.delete",
+			"method": "ga_api.candidate_application.delete",
+			"model": "args",
+			"attributes": {
+				"id": {
+					"type": "text",
+					"required": true
+				}
+			}
+		},{
 		"title": "Job.get",
 		"method": "ga_api.job.get",
 		"model": "args",
