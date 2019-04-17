@@ -567,7 +567,7 @@ var jb_api = {
             }).fail(function (xhr, t, __m) {
                 jb_api._e(xhr, t, cb);
             });
-        }, list: function (cb) {
+        }, list: function (_d, cb) {
             /**
              * Returns ProcessStatus Collection
              * cb: Callback function(error, data)
@@ -575,7 +575,7 @@ var jb_api = {
             __a({
                 context: this,
                 type: 'GET',
-                data: {},
+                data: _d,
                 url: jb_api.rt + 'process_status'
             }).done(function (data) {
                 cb.call(this, null, data);
