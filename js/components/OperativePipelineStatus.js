@@ -1,18 +1,32 @@
-function Pipe({pipe: {title, total}}) {
+function useFetchStatus() {
+  const [status, setStatus] = React.useState([])
+
+  React.useEffect(function() {
+    function handleRequest(_, response) {
+      setStatus(response.data)
+    }
+    jb_api.process_status.list({}, handleRequest)
+  }, [])
+
+  return status
+}
+
+function Pipe({pipe: {id, name}}) {
   return (
     <div className="pipe">
-      <p className="total">{title}</p>
-      <p className="number">{total}</p>
+      <p className="name">{name}</p>
+      <p className="id">{id}</p>
     </div>
   )
 }
 
 const OperativePipelineStatus = ({ data }) => {
+  const status = useFetchStatus()
   return (
     <div className="operative-pipeline-status">
-      {data.map(pipe => <Pipe pipe={pipe}/>)}
+      {status.map(pipe => <Pipe key={pipe.id} pipe={pipe}/>)}
     </div>
   );
 };
 
-ReactDOM.render(<OperativePipelineStatus data={[{title: 'contratar', total: 30}, {title: 'contratar', total: 30}, {title: 'contratar', total: 30}, {title: 'contratar', total: 30}, {title: 'contratar', total: 30}, {title: 'contratar', total: 30}]} />, document.getElementById('operative-pipeline-status'))
+ReactDOM.render(<OperativePipelineStatus/>, document.getElementById('root'))

@@ -1,5 +1,5 @@
 .operative-pipeline-status {
-  display: flex;
+  display: inline-flex;
   border-radius: 4px;
   background-image: linear-gradient(to right, #ff5c6f, #ffc35c 48%, #00abaf);
 }
@@ -30,14 +30,15 @@
   line-height: 1.5;
   color: white;
   margin: 0;
+  min-width: 90px;
 }
 
-.operative-pipeline-status > .pipe > .total {
+.operative-pipeline-status > .pipe > .name {
   font-size: 9px;
   text-transform: uppercase;
 }
 
-.operative-pipeline-status > .pipe > .number {
+.operative-pipeline-status > .pipe > .id {
   font-size: 19px;
 }
 
